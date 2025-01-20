@@ -1,0 +1,22 @@
+/* bug.css */
+.container {
+  width: 500px;
+}
+
+.box {
+  width: calc(50% - 10px);
+  background-color: lightblue;
+}
+
+/* bugSolution.css */
+.container {
+  width: 500px;
+}
+
+.box {
+  /* Avoid mixing percentages and pixels in calc() if possible */
+  width: 490px; /* use fixed width for predictable results*/
+  background-color: lightgreen;
+  /* Alternatively (for more dynamic control, may require JS): */
+  /* width: 49%;  /*Use percentage only */
+}
